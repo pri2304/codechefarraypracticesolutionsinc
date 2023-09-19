@@ -10,23 +10,23 @@ int solve()
          }
         for (i = 1; i < N; i++)
         {
-            if (A[i] < A[i - 1])
+            if (A[i] < A[i - 1]) //condition to check if previous number in array is greater
             {
              printf("no\n");
              return;
             }
         }
-        printf("yes\n");
+        printf("yes\n"); //will print only if first condition is not satisfied throughout the array 
         
 }
 
 int main() 
 {
-	int T;
+	int T; //intializing testcase
 	scanf("%d", &T);
 	while(T--)
 	{
-	    solve();
+	    solve(); //calling function solve
 	}
 	return 0;
 }
