@@ -10,12 +10,12 @@ int solve()
     }
     for(i=0; i<n; i++)
     {
-        if (a[0]<a[i])
+        if (a[0]<a[i]) //condition to find largest number in array
         {
             m2=a[0];
             a[0]=a[i];
         }
-        else if(m2<a[i] && a[i]!=a[0])
+        else if(m2<a[i] && a[i]!=a[0]) //condition to find second largest number in array which is not same as largest number
         {
             m2=a[i];
         }
@@ -24,12 +24,12 @@ int solve()
     m1=a[0];
     printf("%d\n", m1+m2);
 }
-int main() {
+int main() { //intializing testcase
 int t;
 scanf("%d", &t);
 while(t--)
 {
-    solve();
+    solve(); //calling function solve
 }
 	return 0;
 }
