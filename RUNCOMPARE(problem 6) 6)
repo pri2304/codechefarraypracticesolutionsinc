@@ -13,19 +13,19 @@ int solve(){
     }
     for(i=0; i<n; i++)
     {
-        if(a[i]<=2*b[i] && b[i]<=2*a[i])
+        if(a[i]<=2*b[i] && b[i]<=2*a[i]) //condition to check if both alice and bob are happy
         {
             c++;
         }
     }
     printf("%d\n", c);
 }
-int main(void) {
+int main() { //initializing testcase
 int t;
 scanf("%d", &t);
 while(t--)
 {
-	solve();
+	solve(); //calling function solve
 }
 return 0;
 }
