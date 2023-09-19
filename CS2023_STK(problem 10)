@@ -1,5 +1,5 @@
 #include <stdio.h>
-int solve()
+int solve() 
 {
     int n, i, c1=0, c2=0, m1=0, m2=0;
     scanf("%d", &n);
