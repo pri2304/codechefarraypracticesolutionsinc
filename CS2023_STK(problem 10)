@@ -1,0 +1,59 @@
+#include <stdio.h>
+int solve()
+{
+    int n, i, c1=0, c2=0, m1=0, m2=0;
+    scanf("%d", &n);
+    int a[n], b[n];
+    for (i=0; i<n; i++) //taking array for om
+    {
+        scanf("%d", &a[i]);
+    }
+    for (i=0; i<n; i++) //taking array for addy
+    {
+        scanf("%d", &b[i]);
+    }
+    for(i=0; i<n; i++)
+    {
+        if(a[i]>0) //checking if element is not 0, if not 0 add 1 to counter c1
+        {
+            c1++;
+            if(c1>m1) //condition to check if counter is greater then previous streak
+            {m1=c1;}
+        }
+        else 
+        {
+            c1=0; //reseting counter at a[i]=0
+        }
+        if (b[i]>0) //checking if element is not 0, if not 0 add 1 to counter c2
+        {
+            c2++;
+            if(c2>m2) //condition to check if counter is greater then previous streak
+            {m2=c2;}
+        }
+        else 
+        {
+            c2=0; //reseting counter at b[i]=0
+        }
+    }
+    if (m1>m2) //conditions for who has higher streak
+    {
+        printf("Om\n");
+    }
+    else if(m2>m1)
+    {
+        printf("Addy\n");
+    }
+    else
+    {
+        printf("Draw\n");
+    }
+}
+int main() {                          //taking testcase
+    int t;
+    scanf("%d", &t);
+    while(t--)
+    {
+        solve();                     //calling a function solve
+    }
+	return 0;
+}
