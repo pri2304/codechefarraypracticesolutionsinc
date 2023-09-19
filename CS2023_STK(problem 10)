@@ -48,12 +48,12 @@ int solve()
         printf("Draw\n");
     }
 }
-int main() {                          //taking testcase
+int main() {                          //initializing testcase
     int t;
     scanf("%d", &t);
     while(t--)
     {
-        solve();                     //calling a function solve
+        solve();                     //calling function solve
     }
 	return 0;
 }
